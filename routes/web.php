@@ -24,10 +24,20 @@ Route::get('/', function () {
             'link' => 'about'
         ]
     ];
+    $location = '/';
 
-    return view('Home', compact('navbar_voices'));
+    return view('Home', compact('navbar_voices', 'location'));
 });
 
 Route::get('/about', function () {
-    return view('About_us');
+    $navbar_voices = [
+        'HomePage' => [
+            'link' => '/'
+        ],
+        'About-us' => [
+            'link' => 'about'
+        ]
+    ];
+    $location = 'about';
+    return view('About_us', compact('navbar_voices', 'location'));
 });

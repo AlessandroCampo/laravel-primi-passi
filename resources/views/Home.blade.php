@@ -10,20 +10,8 @@
 </head>
 
 <body class="bg-[#121212] text-white">
-    <nav>
-        <ul class="flex gap-2 justify-center py-6 text-xl">
-            :@foreach ($navbar_voices as $key => $voice)
-                <li>
-                    <a href="{{ $voice['link'] }}
-                    ">
-                        {{ $key }}
-                    </a>
+    @include('components.Navbar')
 
-                </li>
-            @endforeach
-        </ul>
-
-    </nav>
     <h1 class="text-3xl text-pink-700">
         Welcome in the home page!
     </h1>
