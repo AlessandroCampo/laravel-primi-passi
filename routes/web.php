@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('Home');
+    $navbar_voices = [
+        'HomePage' => [
+            'link' => '/'
+        ],
+        'About-us' => [
+            'link' => 'about'
+        ]
+    ];
+
+    return view('Home', compact('navbar_voices'));
+});
+
+Route::get('/about', function () {
+    return view('About_us');
 });
